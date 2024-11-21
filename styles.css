@@ -1,0 +1,1118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--primary-color: #2b3570;
+	--background-color: #dddad7;
+	--dark-color: #151515;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ********************************** */
+/*             UTILIDADES             */
+/* ********************************** */
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.heading-1 {
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
+}
+
+/* ********************************** */
+/*               HEADER               */
+/* ********************************** */
+.container-hero {
+	background-color: var(--background-color);
+}
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.customer-support {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.customer-support i {
+	font-size: 3.3rem;
+}
+
+.content-customer-support {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.container-logo i {
+	font-size: 3rem;
+}
+
+.container-logo h1 a {
+	text-decoration: none;
+	color: #000;
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+.container-user {
+	display: flex;
+	gap: 1rem;
+	cursor: pointer;
+}
+
+.container-user .fa-user {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-right: 2.5rem;
+	border-right: 1px solid #e2e2e2;
+}
+
+.container-user .fa-basket-shopping {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-left: 1rem;
+}
+
+.content-shopping-cart {
+	display: flex;
+	flex-direction: column;
+}
+
+/* ************* NAVBAR ************* */
+.container-navbar {
+	background-color: var(--primary-color);
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+}
+
+.navbar .fa-bars {
+	display: none;
+}
+
+.menu {
+	display: flex;
+	gap: 2rem;
+}
+
+.menu li {
+	list-style: none;
+}
+
+.menu a {
+	text-decoration: none;
+	font-size: 1.3rem;
+	color: var(--dark-color);
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.menu a::after {
+	content: '';
+	width: 1.5rem;
+	height: 1px;
+	background-color: #fff;
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+	opacity: 1;
+}
+
+.menu a:hover {
+	color: #fff;
+}
+
+.search-form {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border: 2px solid #fff;
+	border-radius: 2rem;
+	background-color: #fff;
+	height: 4.4rem;
+	overflow: hidden;
+}
+
+.search-form input {
+	outline: none;
+	font-family: inherit;
+	border: none;
+	width: 25rem;
+	font-size: 1.4rem;
+	padding: 0 2rem;
+	color: #777;
+	cursor: pointer;
+}
+
+.search-form input::-webkit-search-cancel-button {
+	appearance: none;
+}
+
+.search-form .btn-search {
+	border: none;
+	background-color: var(--primary-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 1rem;
+}
+
+.btn-search i {
+	font-size: 2rem;
+	color: #fff;
+}
+
+
+/* ********************************** */
+/*            MAIN CONTENT            */
+/* ********************************** */
+.main-content {
+	background-color: var(--background-color);
+}
+
+/* ********************************** */
+/*              FEATURES              */
+/* ********************************** */
+.container-features {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 3rem;
+	padding: 3rem 0;
+}
+
+.card-feature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+
+	background-color: #fff;
+	border-radius: 1rem;
+	padding: 1.5rem 0;
+}
+
+.card-feature i {
+	font-size: 2.7rem;
+	color: var(--primary-color);
+}
+
+.feature-content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.feature-content span {
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: var(--dark-color);
+}
+
+.feature-content p {
+	color: #777;
+	font-weight: 500;
+}
+
+
+/* ********************************** */
+/*            TOP PRODUCTS            */
+/* ********************************** */
+.top-products {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+.container-options {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-bottom: 1rem;
+}
+
+.container-options span {
+	color: #777;
+	background-color: #fff;
+	padding: 0.7rem 3rem;
+	font-size: 1.4rem;
+	text-transform: capitalize;
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+.container-options span:hover {
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+.container-options span.active {
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+/* Products */
+.container-products {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 3rem;
+}
+
+.card-product {
+	background-color: #fff;
+	padding: 2rem 3rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.container-img {
+	position: relative;
+}
+
+.container-img img {
+	width: 100%;
+}
+
+.container-img .discount {
+	position: absolute;
+	left: 0;
+	background-color: var(--primary-color);
+	color: #fff;
+	padding: 2px 1.2rem;
+	border-radius: 1rem;
+	font-size: 1.2rem;
+}
+
+.card-product:hover .discount {
+	background-color: #000;
+}
+
+.button-group {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	position: absolute;
+	top: 0;
+	right: -3rem;
+	z-index: -1;
+	transition: all 0.4s ease;
+}
+
+.button-group span {
+	border: 1px solid var(--primary-color);
+	padding: 0.8rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+
+.button-group span:hover {
+	background-color: var(--primary-color);
+}
+
+.button-group span i {
+	font-size: 1.5rem;
+	color: var(--primary-color);
+}
+
+.button-group span:hover i {
+	color: #fff;
+}
+
+.card-product:hover .button-group {
+	z-index: 0;
+	right: -1rem;
+}
+
+.content-card-product {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(4, min-content);
+	row-gap: 1rem;
+}
+
+.stars {
+	grid-row: 1/2;
+	grid-column: 1/-1;
+}
+
+.stars i {
+	font-size: 1.3rem;
+	color: var(--primary-color);
+}
+
+.content-card-product h3 {
+	grid-row: 2/3;
+	grid-column: 1/-1;
+
+	font-weight: 400;
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+
+.content-card-product h3:hover {
+	color: var(--primary-color);
+}
+
+.add-cart {
+	justify-self: start;
+	border: 2px solid var(--primary-color);
+	padding: 1rem;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.add-cart:hover {
+	background-color: var(--primary-color);
+}
+
+.add-cart i {
+	font-size: 1.5rem;
+	color: var(--primary-color);
+}
+
+.add-cart:hover i {
+	color: #fff;
+}
+
+.content-card-product .price {
+	justify-self: end;
+	align-self: center;
+
+	font-size: 1.7rem;
+	font-weight: 600;
+}
+
+.content-card-product .price span {
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-decoration: line-through;
+	color: #777;
+	margin-left: 0.5rem;
+}
+
+/* ********************************** */
+/*               GALLERY              */
+/* ********************************** */
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 30rem);
+	gap: 1.5rem;
+	margin-bottom: 3rem;
+}
+
+.gallery img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.gallery-img-3 {
+	grid-column: 2/4;
+	grid-row: 1/3;
+}
+
+/* ********************************** */
+/*              SPECIALS              */
+/* ********************************** */
+.specials {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+
+
+
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 768px       */
+/* ********************************** */
+@media (max-width: 768px) {
+	html {
+		font-size: 55%;
+	}
+
+	.hero {
+		padding: 2rem;
+	}
+
+	.customer-support {
+		display: none;
+	}
+
+	.content-shopping-cart {
+		display: none;
+	}
+
+	.navbar {
+		padding: 1rem 2rem;
+	}
+
+	.navbar .fa-bars {
+		display: block;
+		color: #fff;
+		font-size: 3rem;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.content-banner {
+		max-width: 50rem;
+		margin: 0 auto;
+		padding: 25rem 0;
+	}
+
+	.container-features {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 3rem 2rem;
+	}
+
+	.card-feature {
+		padding: 2rem;
+	}
+
+	.heading-1 {
+		font-size: 2.4rem;
+	}
+
+	.card-category {
+		height: 12rem;
+	}
+
+	.card-category p {
+		font-size: 2rem;
+		text-align: center;
+		line-height: 1;
+	}
+
+	.card-category span {
+		font-size: 1.4rem;
+	}
+
+	.container-options {
+		align-items: center;
+	}
+
+	.container-options span {
+		text-align: center;
+		padding: 1rem 2rem;
+	}
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+	}
+
+	.gallery {
+		grid-template-rows: repeat(2, 15rem);
+	}
+
+	.container-blogs {
+		overflow: hidden;
+		grid-template-columns: 1fr 1fr;
+
+		height: 52rem;
+	}
+
+	.menu-footer {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.copyright {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+	}
+}
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 468px       */
+/* ********************************** */
+@media (max-width: 468px) {
+	html {
+		font-size: 42.5%;
+	}
+
+	.content-banner {
+		max-width: 50rem;
+		padding: 22rem 0;
+	}
+
+	.heading-1 {
+		font-size: 2.8rem;
+	}
+
+	.card-feature {
+		flex-direction: column;
+		border-radius: 2rem;
+	}
+
+	.feature-content {
+		align-items: center;
+	}
+
+	.feature-content p {
+		font-size: 1.4rem;
+		text-align: center;
+	}
+
+	.feature-content span {
+		font-size: 1.6rem;
+		text-align: center;
+	}
+
+	.container-options span {
+		font-size: 1.8rem;
+		padding: 1rem 1.5rem;
+		font-weight: 500;
+	}
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+		gap: 1rem;
+	}
+
+	.container-img .discount {
+		font-size: 2rem;
+	}
+
+	.content-card-product h3 {
+		font-size: 2.2rem;
+	}
+
+	.gallery {
+		grid-template-rows: repeat(2, 20rem);
+	}
+
+	.blogs {
+		padding: 2rem;
+	}
+
+	.container-blogs {
+		grid-template-columns: 1fr;
+		height: 75rem;
+	}
+
+	.content-blog h3 {
+		font-size: 2.4rem;
+	}
+
+	.content-blog span {
+		font-size: 1.8rem;
+	}
+
+	.content-blog p {
+		font-size: 2.2rem;
+	}
+
+	.btn-read-more{
+		font-size: 1.8rem;
+	}
+
+	.contact-info ul,
+	.information ul,
+	.my-account ul{
+		display: none;
+	}
+
+	.contact-info {
+		align-items: center;
+	}
+
+	.menu-footer{
+		grid-template-columns: 1fr;
+	}
+
+	.content p{
+		font-size: 1.6rem;
+	}
+}
+
+  /* ********************************** */
+/*               FORMULARIO               */
+/* ********************************** */
+
+.contact-wrapper {
+    background-color: #dddad7; 
+    padding: 20px;
+}
+
+
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    padding: 20px;
+    gap: 10px;
+    width: 1000px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo para resaltar la sección */
+    margin: 50px auto; /* Centramos la sección en la página */
+}
+
+.box-info {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.box-info > h1 {
+    text-align: left;
+    letter-spacing: 5px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.data > p {
+    font-size: 1rem;
+}
+
+.data > p > i {
+    color: #2b3570;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.links {
+    display: flex;
+    gap: 15px;
+}
+
+.links > a {
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+   
+    text-align: center;
+    transition: .1s;
+}
+
+.links > a > i {
+    color: #fff;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+.input-box {
+    position: relative;
+}
+
+.input-box > input,
+.input-box > textarea {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid transparent;
+    letter-spacing: 1px;
+    outline: none;
+    transition: .3s;
+    color: #fff;
+}
+
+.input-box > input::placeholder,
+.input-box > textarea::placeholder {
+    color: #a3a3a3;
+}
+
+.input-box > input:focus::placeholder,
+.input-box > textarea:focus::placeholder {
+    color: transparent;
+}
+
+.input-box > input:focus,
+.input-box > textarea:focus {
+    border-bottom: 3px solid #2b3570;
+    animation: shake .2s;
+}
+
+.input-box > i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: rgba(255, 255, 255, 0.3);
+    transition: .3s;
+}
+
+.input-box > input:focus ~ i {
+    color: #6876c4;
+}
+
+form > button {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background: #2b3570;
+    color: #fff;
+    border: none;
+    transition: .1s;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form > button:hover,
+.links > a:hover {
+    background: #6876c4;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+@media screen and (max-width: 600px) {
+    .container2 {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .box-info {
+        gap: 15px;
+    }
+
+    .box-info > h1 {
+        font-size: 1.5rem;
+    }
+}
+
+ /* ********************************** */
+/*               PIE DE PAGINA               */
+/* ********************************** */
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #2b3570;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+  }
+
+  /* ********************************** */
+/*                carta               */
+/* ********************************** */
+
+.container-blogs2{
+	background-color: #dddad7; 
+    padding: 20px;
+	
+	
+}
+
+.container-blogs {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 15rem;
+	padding: 80px;
+	
+}
+
+.card-blog {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #fff; 
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.card-blog .container-img {
+	border-radius: 2rem;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.content-blog h3 {
+	font-size: 1.8rem;
+	margin-bottom: 1.7rem;
+	font-weight: 500;
+}
+
+
+
+.content-blog p {
+	margin-top: 1rem;
+	font-size: 1.4rem;
+	color: #777;
+}
+
+
+
+
+ /* ********************************** */
+/*                BOTTON              */
+/* ********************************** */
+
+.btn-primary {
+    background-color: #003366; /* Mismo color de fondo */
+    color: white; /* Color de texto */
+    padding: 10px 100px; /* Espaciado interno */
+    border: none; 
+    border-radius: 20px; /* Bordes redondeados */
+    font-size: 16px; 
+    cursor: pointer; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+.btn-primary:hover {
+    background-color: #0055cc; 
+    transform: scale(1.1); 
+}
+
+/* Animación de "rebote" */
+.btn-primary:active {
+    transform: scale(0.9); 
+    transition: transform 0.1s ease; 
+}
+/* ********************************** */
+/*         INICIO DE SESIÓN           */
+/* ********************************** */
+ 
+ 
+/* Envuelve el contenedor */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%; /* Asegura que ocupe el 100% del ancho */
+    background-color: #dddad7; /* Color de fondo fuera del cuadro */
+}
+ 
+/* Contenedor del formulario */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    width: 100%;
+    max-width: 400px; /* Limita el ancho máximo del formulario */
+    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+}
+ 
+/* Título */
+.login-container h2 {
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px; /* Más espacio debajo del título */
+}
+ 
+/* Etiquetas del formulario */
+.login-form label {
+    font-size: 16px;
+    margin-bottom: 10px; /* Espacio entre etiqueta y campo */
+    display: block;
+}
+ 
+/* Estilo para los campos de entrada */
+.login-form input {
+    width: 100%; /* Ocupa el 100% del contenedor */
+    padding: 12px;
+    background: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px; /* Espacio entre los campos */
+    font-size: 16px;
+    box-sizing: border-box; /* Para que el padding no rompa el diseño */
+}
+ 
+.login-form input:focus {
+    border-color: #0056b3;
+}
+ 
+/* Botón de envío */
+.login-form button {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 12px;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra en el botón */
+}
+ 
+.login-form button:hover {
+    background-color: #004085;
+}
+ 
+/* Pie de página */
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+ 
+.login-footer a {
+    color: #0056b3;
+    text-decoration: none;
+}
+ 
+.login-footer a:hover {
+    text-decoration: underline;
+}
+ 
+/* ********************************** */
+/*               BANNER               */
+/* ********************************** */
+ .carousel-item img {
+	width: 100%; 
+	height: 40rem; 
+	object-fit: cover; 
+ }
+
+ .carousel {
+	position: relative;
+	width: 100%; 
+ }
+ /* ********************************** */
+/*         PÁGINA DE REGISTRO         */
+/* ********************************** */
+/* Envuelve el contenedor */
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%; /* Asegura que ocupe el 100% del ancho */
+    background-color: #dddad7; /* Color de fondo fuera del cuadro */
+}
+/* Contenedor del formulario */
+.register-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    width: 100%;
+    max-width: 400px; /* Limita el ancho máximo del formulario */
+    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+}
+/* Título */
+.register-container h2 {
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px; /* Más espacio debajo del título */
+}
+/* Etiquetas del formulario */
+.register-form label {
+    font-size: 16px;
+    margin-bottom: 10px; /* Espacio entre etiqueta y campo */
+    display: block;
+}
+/* Estilo para los campos de entrada */
+.register-form input {
+    width: 100%; /* Ocupa el 100% del contenedor */
+    padding: 12px;
+    background: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px; /* Espacio entre los campos */
+    font-size: 16px;
+    box-sizing: border-box; /* Para que el padding no rompa el diseño */
+}
+.register-form input:focus {
+    border-color: #0056b3;
+}
+/* Botón de envío */
+.register-form button {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 12px;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra en el botón */
+}
+.register-form button:hover {
+    background-color: #004085;
+}
+/* Pie de página */
+.register-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.register-footer a {
+    color: #0056b3;
+    text-decoration: none;
+}
+.register-footer a:hover {
+    text-decoration: underline;
+}
